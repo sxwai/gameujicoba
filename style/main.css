@@ -1,0 +1,436 @@
+/**
+* =============================================================================
+* This is the file where all your styling should go in.
+* Instead of modifying the styles found in the monogatari.css file or others,
+* you should overwrite those styles in this file.
+*
+* The CSS selectors shown are not an extensive list but they are the most
+* common you might want to change. To find what other elements are available,
+* you can take a look at the monogatari.css file or use your browser's dev
+* tools to inspect the elements.
+* =============================================================================
+**/
+
+/**
+* ===========================
+* General Styling
+* ===========================
+**/
+
+/* General Style */
+body {
+    font-family: Montserrat;
+    color: rgb(184,153,118);
+}
+
+/* Simple Button styles*/
+button {
+    background: url(../img/ui/Dark-Pattern.png);
+    opacity: .8;
+    color: rgb(184,153,118);
+
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+/* Simple Button Style on Hover */
+button:hover {
+
+}
+
+button:after {
+    transition: all 3s;
+
+}
+
+button:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0.2s;
+    transform: translateY(4px);
+}
+
+/* General Styling for Menu Screens */
+[data-menu] {
+    background-image: url(../img/ui/Light-Pattern.png);
+}
+
+[data-component="modal"] {
+
+}
+
+/**
+* ===========================
+* Main Menu Styling
+* ===========================
+**/
+
+/* Main Menu Styling */
+[data-menu="main"] {
+
+}
+
+/* Main Menu Buttons Styling */
+[data-menu="main"] button {
+
+}
+
+/**
+* ===========================
+* Input Styling
+* ===========================
+**/
+
+
+[data-ui="input"] div {
+    width: auto;
+    padding: 1vmin;
+}
+
+[data-ui="input"] small {
+    margin: 0.5rem auto;
+}
+
+[data-ui="input-message"] {
+    font-size: 1rem;
+}
+
+[data-ui="input"] input,
+textarea {
+    padding: 1vmin;
+    background: #eee;
+    min-width: 50%;
+}
+
+[data-ui="input"] button {
+    width: 3.5rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+[data-menu='save'] input {
+    background: #FFFFFF;
+    border: 1px solid rgb(184,153,118);
+    color: rgb(184,153,118);
+}
+
+/**
+* ===========================
+* Save and Load Menus Styling
+* ===========================
+**/
+
+/* Slots Style */
+[data-ui="slots"] figure {
+    background: url(../img/ui/Dark-Pattern.png), rgb(247, 247, 247, .8);
+    border: 2.5px solid rgb(184,153,118);
+    border-radius: 15px;
+
+    color: rgb(184,153,118);
+}
+
+/* Slot's Image Style */
+[data-ui="slots"] img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Slots Title Style */
+[data-ui="slots"] figcaption {
+
+}
+
+/* Slots Delete Button Style */
+[data-ui="slots"] button {
+    background-color: rgb(184,153,118,0.8);
+}
+
+/**
+* ===========================
+* Game Elements Styling
+* ===========================
+**/
+
+/* Choice Buttons style */
+[data-ui="choices"] button {
+
+    background: url(../img/ui/Light-Pattern.png), rgb(247, 247, 247, .8);
+    background-size: 25%;
+
+    opacity: 0.90;
+    border-bottom: 3px solid rgb(184,153,118);
+    border-top: 3px solid rgb(184,153,118);
+
+    border-radius: 0;
+    width: 70%;
+
+    z-index: 12;
+    color: rgb(184,153,118);
+}
+
+/* Choice Button Style on Hover */
+[data-ui="choices"] button:hover {
+    border-bottom: 4px solid rgb(184,153,118);
+    border-top: 4px solid rgb(184,153,118);
+
+    font-weight: 700;
+
+    box-shadow: 0px 0px 25px white;
+}
+
+/* Text Box styling */
+
+[data-ui="text"] {
+    min-height: 22%;
+    max-height: 25%;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 10;
+    text-align: left;
+    position: absolute;
+    color: rgb(184,153,118);
+
+    background: url(../img/ui/Light-Pattern.png), rgb(247, 247, 247, .8);
+    background-size: 25%;
+    opacity: 0.90;
+
+    font-weight: 500;
+//    text-shadow: 1px 0px 15px #FFFFFF;
+
+    outline: 5px solid rgb(247, 247, 247, .8);
+    border-top: 2.5px solid rgb(184,153,118);
+    border-bottom: 2.5px solid rgb(184,153,118);
+}
+
+[data-ui="text"] p {
+//    padding-left: 20%;
+
+    opacity: 1;
+    line-height: 1.4;
+    letter-spacing: 0.4px;
+}
+
+/*.emblem {
+    margin-top:0.6%;
+    margin-left: 0.8%;
+    width: 16%;
+
+//    background-image: url(../img/ui/003.png);
+    background-size: 100%;
+}
+*/
+.outer{
+    outline: 5px dashed #000;
+    margin-bottom:   5%;
+}
+
+.deco-line{
+    transform: scaleY(-1);
+    background-image: url(../img/ui/Line.svg);
+    background-size: 600px 30px;
+    background-repeat: repeat-x;
+    min-height: 20px;
+
+    padding: 0;
+}
+
+.deco-line-bottom{
+    background-image: url(../img/ui/Line.svg);
+    background-size: 600px 30px;
+    background-repeat: repeat-x;
+    min-height: 20px;
+    max-height: 20px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/*.emblem{
+background-image: url(../img/ui/emblem.svg);
+background-size: 150px;
+min-height: 75px;
+max-width: 150px;
+
+margin-top: -15px;
+}*/
+
+
+
+/* Character Name Style */
+[data-ui="who"] {
+//    padding-left: 20%;
+    padding-bottom: 1px;
+//    padding-top: 10px;
+    font-weight: 600;
+
+    width: 100px;
+
+    /*text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;*/
+}
+
+[data-ui="face"]{
+    position: static;
+    top: 63%;
+    width: 20%;
+    z-index: 11;
+}
+
+/* Style for Centered Text */
+[data-ui="centered"] {
+
+}
+
+/* Character Images Styles */
+#game [data-character] {
+    top: 5%;
+    max-height: 120vh;
+}
+
+/* Other Images Styles */
+#game [data-image] {
+
+}
+
+/**
+* ====================================
+* Inputs Styling
+* ====================================
+**/
+
+input[type='range']::-webkit-slider-thumb {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    background: rgb(184,153,118);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50px;
+}
+
+input[type=range].light:focus::-ms-fill-upper {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+input[type=range].light:focus::-ms-fill-lower {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+input[type=range].light::-moz-range-track {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+input[type=range].light::-ms-fill-lower {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+input[type=range].light::-ms-fill-upper {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+input[type=range] {
+    width: 60%;
+    height: 2vmin;
+}
+
+/**
+* ===========================
+* Quick Menu Styling
+* ===========================
+**/
+
+/* These styles are applied to the Mobile version of the Quick Menu */
+
+/* Quick Menu Style */
+[data-ui="quick-menu"] {
+
+}
+
+/* Quick Menu Buttons Style */
+[data-ui="quick-menu"] span {
+
+}
+
+/* Quick Menu Buttons Style on Hover */
+[data-ui="quick-menu"] span:hover {
+
+}
+
+/* Quick Menu Buttons Icon Style */
+[data-ui="quick-menu"] > span > .fa {
+
+}
+
+/* Styles for the desktop version of the Quick Menu*/
+@media screen and (min-width: 37.56255em) {
+
+    /* Quick Menu Style */
+    [data-ui="quick-menu"] {
+        z-index: 12;
+        background-color: rgb(256,256,256,0);
+        color: rgb(256,256,256,0.7);
+    }
+
+    /* Quick Menu Buttons Style */
+    [data-ui="quick-menu"] span {
+        font-weight: 600;
+        /*border-radius: 0px 0px 10px 10px;
+
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        padding: 1px 2px 1px 2px;*/
+        text-shadow:
+            -1px -1px 0 #553f27,  
+            1px -1px 0 #553f27,
+            -1px 1px 0 #553f27,
+            1px 1px 0 #553f27;
+
+    }
+
+
+
+    [data-ui="quick-menu"] > span > [data-string] {
+        display: inline-block;
+    }
+
+    [data-ui="quick-menu"] > span > .fa {
+        display: none;
+    }
+
+    /* Quick Menu Buttons Style on Hover */
+    [data-ui="quick-menu"] span:hover {
+        font-weight: 600;
+        color: rgb(256,256,256,1);
+
+        text-shadow:
+            -1px -1px 5 #553f27,  
+            1px -1px 5 #553f27,
+            -1px 1px 5 #553f27,
+            1px 1px 5 #553f27;
+        -webkit-transition-duration: 0.2s; /* Safari */
+        transition-duration: 0.2s;
+
+        /*color: #553f27;
+
+        text-shadow:
+        -1px -1px 5 #f7f7f7,  
+        1px -1px 5 #f7f7f7,
+        -1px 1px 5 #f7f7f7,
+        1px 1px 5 #f7f7f7;*/
+    }
+}
+
+
+}
